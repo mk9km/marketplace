@@ -1,0 +1,11 @@
+bs4
+flask
+flask-login
+flask-migrate
+flask-sqlalchemy
+flask_restx
+flask_session
+flask_wtf
+jinja2
+pydantic
+requests

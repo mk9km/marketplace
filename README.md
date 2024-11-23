@@ -1,5 +1,5 @@
 
-EVENT MARKETPLACE
+MARKETPLACE
 ==============================
 
 1.Synopsis
@@ -12,21 +12,33 @@ different selling models with autoscaling and separate worker process and queue 
 - "*Lottery*";
 - "*Auction*".
 
-3.Backend architecture
+2.Backend architecture
 ------------------------------
 
-The architecture suggests API microservices and should have such services:
-- Selling logic services (task manager, selling models handling) (API service);
-- User panel (API service);
-- Partner panel (API service);
-- Admin management panel (API service);
-- Infrastructure management service (API service);
-- Monitoring service (API service);
-- Report and Statistic service (API service);
-- Billing service (API service);
+The architecture suggests modularity and should have such services:
+- Selling logic services (selling models handling);
+- User service;
+- Partner service;
+- Administrator management service;
+- Monitoring service;
+- Report and Statistic service;
+- Billing service;
 
 
-2.Features (requirements):
+3.Features (requirements):
 ------------------------------
- - Separate worker (process) and queue for each partner for scaling;
- - Each service should support OpenAPI
+ - OpenAPI support;
+
+4.How to build and run
+------------------------------
+
+```commandline
+make build
+make run
+```
+
+or 
+
+```commandline
+docker-compose up -d
+```

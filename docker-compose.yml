@@ -1,0 +1,9 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: marketplace:latest
+    container_name: marketplace
+    ports:
+      - "8888:8888"
